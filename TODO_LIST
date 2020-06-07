@@ -33,6 +33,7 @@ Afterwards: video!
     - Copy opcode
     - Encoder operations to use buffer or direct rendering
     - Audio sync
+    - Bandwidth and GPU operation limiting per second/frame
 
 Finally:
     -> lua player capable of handling this
