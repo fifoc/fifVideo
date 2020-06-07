@@ -1,0 +1,39 @@
+What needs to be done:
+    - Segment simplification (This would use the color simplification alghoritm to find the nearest one too)
+        ( Standard, Text-optimised )
+        Standard like in old fif
+        Text-optimised like 2 brightest colors (or 2 darkest)
+
+    - Color simplification
+        ( Standard, Always step down, Always step up, Stupid, Realistic )
+
+    - Segment encoding strategies
+        -> Line
+        -> Vertical line
+        -> Fill
+        -> Line with overwrite
+        -> Vertical line with overwrite
+        -> Fill with overwrite
+        -> All above with inversion allowed
+
+    - Strategy picking:
+        -> Sort color by occurence and then for every character try something, pick, mask, try
+        -> Try EVERY strategy for EVERY character before taking action
+        -> Vertical lines instead of horizontal
+        -> Edge based
+
+Afterwards: video!
+    - Lossy differences:
+        -> Pixel amount (if not enough change, don't do stuff) | Variable frame rate |
+
+    - Difference simplification:
+        -> Attempt to draw lines between areas, simplify some detail (remove special color occurences etc)
+        -> Attempt to simplify areas into boxes (up to --threshold)
+
+    - Copy opcode
+    - Encoder operations to use buffer or direct rendering
+    - Audio sync
+
+Finally:
+    -> lua player capable of handling this
+    -> youtube-dl frontend
